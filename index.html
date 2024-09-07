@@ -6,24 +6,34 @@
     <title>이재용 클라리넷 유튜브 독주회</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
-        body {
-            font-family: 'Noto Serif KR', serif;
-            background-color: #f5f0e8;
+        .slider-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            height: 600px; /* Adjust as needed */
+            overflow: hidden;
+        }
+        .slider-image {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .active {
+            display: block;
         }
     </style>
 </head>
-<body class="text-gray-800">
-    <header class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-4 fixed w-full top-0 z-10">
+<body class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white">
+    <header class="py-4 fixed w-full top-0 z-10">
         <div class="container mx-auto px-4">
-            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-2">이재용 클라리넷 유튜브 독주회</h1>
-            <nav class="flex justify-center">
-                <ul class="flex flex-wrap justify-center space-x-2 sm:space-x-4">
-                    <li><a href="#home" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">홈</a></li>
-                    <li><a href="#program" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">프로그램</a></li>
-                    <li><a href="#gallery" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">갤러리</a></li>
-                    <li><a href="#reservation" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">예약</a></li>
-                </ul>
+            <h1 id="이재용-클라리넷-유튜브-독주회" class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-2">이재용 클라리넷 유튜브 독주회</h1>
+            <nav class="flex justify-center space-x-4">
+                <a href="#home" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">홈</a>
+                <a href="#program" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">프로그램</a>
+                <a href="#gallery" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">갤러리</a>
+                <a href="#reservation" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">예약</a>
+                <a href="#pamphlet" class="text-sm sm:text-base hover:text-yellow-200 transition duration-300">팜플렛</a>
             </nav>
         </div>
     </header>
@@ -33,20 +43,20 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                     <img src="Lee-Photoroom.png" alt="이재용 클라리넷 연주자" class="w-full h-auto rounded-lg shadow-lg mb-4">
-                    <p class="text-base sm:text-lg mb-2 sm:mb-4"><strong class="text-indigo-700">일시:</strong> 2024년 10월 15일 오후 7시</p>
-                    <p class="text-base sm:text-lg mb-2 sm:mb-4"><strong class="text-indigo-700">장소:</strong> 유튜브 라이브</p>
-                    <p class="text-base sm:text-lg"><strong class="text-indigo-700">연주자:</strong> 이재용 (클라리넷)</p>
+                    <p class="text-black"><strong>일시:</strong> 2024년 10월 15일 오후 7시</p>
+                    <p class="text-black"><strong>장소:</strong> 유튜브 라이브</p>
+                    <p class="text-black"><strong>연주자:</strong> 이재용 (클라리넷)</p>
                 </div>
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                     <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-800">연주자 소개</h3>
-                    <p class="text-sm sm:text-base mb-4">이재용은 국내외에서 활발한 활동을 펼치고 있는 클라리넷 연주자입니다. 백석예술대학교 관현악과을 졸업하고 백석 콘서바토리에서 실기 수료했습니다.</p>
-                    <p class="text-sm sm:text-base mb-2">주요 경력:</p>
-                    <ul class="list-disc list-inside mb-4 text-indigo-900 text-sm sm:text-base">
+                    <p class="text-black">이재용은 국내외에서 활발한 활동을 펼치고 있는 클라리넷 연주자입니다. 백석예술대학교 관현악과을 졸업하고 백석 콘서바토리에서 실기 수료했습니다.</p>
+                    <p class="text-black mt-2"><strong>주요 경력:</strong></p>
+                    <ul class="list-disc list-inside text-black">
                         <li>바디프렌드 직업연주자</li>
                         <li>코리아아트빌리티 클라리넷 단원</li>
                         <li>한우리 오케스트라 단원</li>
                     </ul>
-                    <p class="text-sm sm:text-base">현재 다수의 공연을 통해 관객들과 소통하고 있습니다.</p>
+                    <p class="text-black mt-2">현재 다수의 공연을 통해 관객들과 소통하고 있습니다.</p>
                 </div>
             </div>
         </section>
@@ -56,26 +66,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                     <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-800">프로그램 목록</h3>
-                    <ul class="space-y-4">
-                        <li>
-                            <h4 class="text-lg sm:text-xl font-semibold text-indigo-700">모차르트: 클라리넷 협주곡 A장조, K. 622</h4>
-                            <p class="text-sm sm:text-base text-gray-700">- 1악장: Allegro</p>
-                            <p class="text-sm sm:text-base text-gray-700">- 2악장: Adagio</p>
-                            <p class="text-sm sm:text-base text-gray-700">- 3악장: Rondo: Allegro</p>
-                        </li>
+                    <h4 class="text-lg sm:text-xl font-semibold text-indigo-700">모차르트: 클라리넷 협주곡 A장조, K. 622</h4>
+                    <ul class="list-disc list-inside text-black">
+                        <li>1악장: Allegro</li>
+                        <li>2악장: Adagio</li>
+                        <li>3악장: Rondo: Allegro</li>
                     </ul>
                 </div>
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                     <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-800">프로그램 노트</h3>
-                    <p class="text-sm sm:text-base mb-4">모차르트의 클라리넷 협주곡 A장조 K.622는 1791년에 작곡된 그의 마지막 협주곡 중 하나로, 클라리넷을 위한 가장 유명한 작품 중 하나입니다. 이 곡은 모차르트가 클라리넷 연주자인 친구 안톤 슈타들러를 위해 쓴 작품으로, 클라리넷의 아름다운 음색과 표현력을 극대화하고 있습니다.</p>
-                    <p class="text-sm sm:text-base mb-4">협주곡은 총 세 개의 악장으로 구성되어 있으며, 첫 번째 악장은 밝고 활기찬 소나타 형식, 두 번째 악장은 서정적이고 감미로운 아다지오, 세 번째 악장은 경쾌하고 유쾌한 론도 형식입니다. 특히 2악장은 영화와 드라마에서 자주 사용될 만큼 감동적이고 서정적인 분위기를 자아내어 많은 이들에게 사랑받고 있습니다.</p>
-                    <p class="text-sm sm:text-base mb-4">원래 이 곡은 바셋 호른을 위해 작곡되었으나, 현재는 대부분 클라리넷으로 연주됩니다. 모차르트의 말년 작품답게 그의 성숙한 작곡 기술이 돋보이며, 오케스트라와 클라리넷이 서로 조화를 이루며 아름다운 대화를 주고받는 듯한 구성을 보여줍니다.</p>
-                    <p class="text-sm sm:text-base">이 곡은 클라리넷 협주곡 중 가장 중요한 작품 중 하나로 평가받으며, 오늘날에도 전 세계의 클라리넷 연주자들에게 필수적인 레퍼토리로 자리잡고 있습니다.</p>
+                    <p class="text-black">모차르트의 클라리넷 협주곡 A장조 K.622는 1791년에 작곡된 그의 마지막 협주곡 중 하나로, 클라리넷을 위한 가장 유명한 작품 중 하나입니다. 이 곡은 모차르트가 클라리넷 연주자인 친구 안톤 슈타들러를 위해 쓴 작품으로, 클라리넷의 아름다운 음색과 표현력을 극대화하고 있습니다.</p>
+                    <p class="text-black mt-2">협주곡은 총 세 개의 악장으로 구성되어 있으며, 첫 번째 악장은 밝고 활기찬 소나타 형식, 두 번째 악장은 서정적이고 감미로운 아다지오, 세 번째 악장은 경쾌하고 유쾌한 론도 형식입니다. 특히 2악장은 영화와 드라마에서 자주 사용될 만큼 감동적이고 서정적인 분위기를 자아내어 많은 이들에게 사랑받고 있습니다.</p>
                 </div>
             </div>
         </section>
-
-        <section id="gallery" class="mb-16">
+		<section id="gallery" class="mb-16">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-indigo-900">갤러리</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
@@ -110,28 +115,64 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                     <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-800">예약 안내</h3>
-                    <p class="text-sm sm:text-base mb-4">본 공연은 무료로 진행되며, 유튜브 라이브를 통해 실시간으로 시청하실 수 있습니다. 원활한 진행을 위해 사전 예약을 받고 있습니다.</p>
-                    <p class="text-sm sm:text-base mb-4">예약하신 분들께는 공연 당일 유튜브 링크를 이메일로 보내드립니다.</p>
-                    <p class="text-sm sm:text-base mb-4">문의사항: eunyiy@naver.com 또는 02-1234-5678</p>
+                    <p class="text-black">본 공연은 무료로 진행되며, 유튜브 라이브를 통해 실시간으로 시청하실 수 있습니다. 원활한 진행을 위해 사전 예약을 받고 있습니다.</p>
+                    <p class="text-black mt-2">예약하신 분들께는 공연 당일 유튜브 링크를 이메일로 보내드립니다.</p>
+                    <p class="text-black mt-2">문의사항: eunyiy@naver.com 또는 02-1234-5678</p>
                 </div>
                 <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                     <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-800">예약하기</h3>
-                    <form id="reservationForm" class="space-y-4">
-                        <div>
-                            <label for="name" class="block mb-2 text-sm sm:text-base text-indigo-700">이름</label>
-                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 text-sm sm:text-base border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">이름</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
-                        <div>
-                            <label for="email" class="block mb-2 text-sm sm:text-base text-indigo-700">이메일</label>
-                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 text-sm sm:text-base border rounded focus:outline
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">이메일</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
-                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition duration-300 w-full">예약하기</button>
+                        <div class="flex items-center justify-between">
+                            <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                예약하기
+                            </button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="pamphlet" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-indigo-900">팜플렛</h2>
+            <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                <div class="slider-container">
+                    <img src="pamphlet-1.jpg" alt="팜플렛 1페이지" class="slider-image active">
+                    <img src="pamphlet-2.jpg" alt="팜플렛 2페이지" class="slider-image">
+                    <img src="pamphlet-3.jpg" alt="팜플렛 3페이지" class="slider-image">
+                </div>
+                <div class="flex justify-between mt-4">
+                    <button onclick="changeSlide(-1)" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">이전</button>
+                    <button onclick="changeSlide(1)" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">다음</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-200 py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-4 text-indigo-800">이 공연은 2024년 경기도 장애예술인 전문예술 활동지원 사업에 선정되어 '경기도'와 '경기문화재단'의 지원을 받아 제작되었습니다.</p>
+    <footer class="container mx-auto px-4 text-center">
+        <p>이 공연은 2024년 경기도 장애예술인 전문예술 활동지원 사업에 선정되어 '경기도'와 '경기문화재단'의 지원을 받아 제작되었습니다.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slider-image");
+
+        function changeSlide(n) {
+            slideIndex += n;
+            if (slideIndex >= slides.length) {slideIndex = 0}
+            if (slideIndex < 0) {slideIndex = slides.length - 1}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
+</body>
+</html>
